@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-04T04:14:58.396Z</updated>
+  <updated>2018-04-04T04:48:04.528Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,40 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>testLan</title>
-    <link href="http://yoursite.com/2018/04/04/testLan/"/>
-    <id>http://yoursite.com/2018/04/04/testLan/</id>
-    <published>2018-04-04T04:14:42.000Z</published>
-    <updated>2018-04-04T04:14:58.396Z</updated>
+    <title>Git学习笔记</title>
+    <link href="http://yoursite.com/2018/04/04/Git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/04/04/Git学习笔记/</id>
+    <published>2018-04-04T04:22:49.000Z</published>
+    <updated>2018-04-04T04:48:04.528Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="基本的配置"><a href="#基本的配置" class="headerlink" title="基本的配置"></a>基本的配置</h4><h5 id="mac和linux的git的ssh密钥的方法"><a href="#mac和linux的git的ssh密钥的方法" class="headerlink" title="mac和linux的git的ssh密钥的方法"></a>mac和linux的git的ssh密钥的方法</h5><h6 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h6><p>$ git config –global user.name “xx”<br>$ git config –global user.email “<a href="mailto:xx@xx.com" target="_blank" rel="noopener">xx@xx.com</a>“</p><h6 id="生成-ssh密钥的命令"><a href="#生成-ssh密钥的命令" class="headerlink" title="生成 ssh密钥的命令"></a>生成 ssh密钥的命令</h6><p>ssh-keygen -t rsa -C “<a href="mailto:xx@xx.com" target="_blank" rel="noopener">xx@xx.com</a>“<br>密钥文件的目录是~/.ssh目录的下面</p><h6 id="配置编辑器"><a href="#配置编辑器" class="headerlink" title="配置编辑器"></a>配置编辑器</h6><p>git config –global core.editor emacs</p><h6 id="配置比较工具"><a href="#配置比较工具" class="headerlink" title="配置比较工具"></a>配置比较工具</h6><p>git config –global merge.tool vimdiff</p><h6 id="检查配置"><a href="#检查配置" class="headerlink" title="检查配置"></a>检查配置</h6><p>git config –list</p><h6 id="添加配置项"><a href="#添加配置项" class="headerlink" title="添加配置项"></a>添加配置项</h6><p>git config [–local|–global|–system] –add section.key value(默认是添加在 local 配置中)</p><h6 id="删除配置项"><a href="#删除配置项" class="headerlink" title="删除配置项"></a>删除配置项</h6><p>git config [–local|–global|–system] –unset section.key</p><h4 id="Git的基本命令"><a href="#Git的基本命令" class="headerlink" title="Git的基本命令"></a>Git的基本命令</h4><h6 id="显示某次的提交信息"><a href="#显示某次的提交信息" class="headerlink" title="显示某次的提交信息"></a>显示某次的提交信息</h6><p>git show be24e214620fa072efa877e1967571731c465884(SHA-1)</p><h6 id="显示更改的内容"><a href="#显示更改的内容" class="headerlink" title="显示更改的内容"></a>显示更改的内容</h6><p>git diff</p><h6 id="当你正在更改的东西还没有完成的时候，需要修改其他的东西的时候可以把当前的工作暂存一下"><a href="#当你正在更改的东西还没有完成的时候，需要修改其他的东西的时候可以把当前的工作暂存一下" class="headerlink" title="当你正在更改的东西还没有完成的时候，需要修改其他的东西的时候可以把当前的工作暂存一下"></a>当你正在更改的东西还没有完成的时候，需要修改其他的东西的时候可以把当前的工作暂存一下</h6><p>git stash</p><h6 id="查看暂存的栈"><a href="#查看暂存的栈" class="headerlink" title="查看暂存的栈"></a>查看暂存的栈</h6><p>git stash list</p><h6 id="删除堆栈的内容并且还原到工程里面"><a href="#删除堆栈的内容并且还原到工程里面" class="headerlink" title="删除堆栈的内容并且还原到工程里面"></a>删除堆栈的内容并且还原到工程里面</h6><p>git stash pop</p><h6 id="移动文件的操作"><a href="#移动文件的操作" class="headerlink" title="移动文件的操作"></a>移动文件的操作</h6><p>git mv main.py(文件名) src/(目录)</p><h6 id="重命名的操作"><a href="#重命名的操作" class="headerlink" title="重命名的操作"></a>重命名的操作</h6><p>git mv main.py(旧的文件名) module.py(新的文件名)</p><h6 id="打标签的操作"><a href="#打标签的操作" class="headerlink" title="打标签的操作"></a>打标签的操作</h6><p>git tag -a ‘Release_1_0’(标签名) -m ‘Tagged basic string operation code’(标签的书名) HEAD</p><h6 id="给提交添加标签"><a href="#给提交添加标签" class="headerlink" title="给提交添加标签"></a>给提交添加标签</h6><p>git push origin tag Release_1_0</p><h6 id="显示标签的命令"><a href="#显示标签的命令" class="headerlink" title="显示标签的命令"></a>显示标签的命令</h6><p>git tag</p><h6 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h6><p>git tag -d Release_1_0</p><h6 id="给提交删除标签"><a href="#给提交删除标签" class="headerlink" title="给提交删除标签"></a>给提交删除标签</h6><p>git push origin :Release_1_0</p><h6 id="新建分支"><a href="#新建分支" class="headerlink" title="新建分支"></a>新建分支</h6><p>git branch new_branch(分支名)</p><h6 id="显示当前的所有分支名"><a href="#显示当前的所有分支名" class="headerlink" title="显示当前的所有分支名"></a>显示当前的所有分支名</h6><p>git branch</p><h6 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h6><p>git checkout new_branch(分支名)</p><h6 id="重命名分支"><a href="#重命名分支" class="headerlink" title="重命名分支"></a>重命名分支</h6><p>git branch -m new_branch(老) wchar_support(新)</p><h6 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h6><p>git merge origin/wchar_support(新的分支)</p><h6 id="初始化git库"><a href="#初始化git库" class="headerlink" title="初始化git库"></a>初始化git库</h6><p>git init</p><h6 id="添加到库"><a href="#添加到库" class="headerlink" title="添加到库"></a>添加到库</h6><p>git add 文件名 </p><h6 id="提交到库"><a href="#提交到库" class="headerlink" title="提交到库"></a>提交到库</h6><p>git commit -m “注释”</p><h6 id="过滤没有用的信息-只显示commit-ID和-提交注释"><a href="#过滤没有用的信息-只显示commit-ID和-提交注释" class="headerlink" title="过滤没有用的信息,只显示commit ID和 提交注释"></a>过滤没有用的信息,只显示commit ID和 提交注释</h6><p>git log –pretty=oneline</p><h6 id="回退版本的操作"><a href="#回退版本的操作" class="headerlink" title="回退版本的操作"></a>回退版本的操作</h6><p>git reset –hard HEAD^<br>HEAD^表示上一个版本 HEAD^^表示上上一个版本 HEAD~100可以表示上100个版本</p><h6 id="打印最近的操作"><a href="#打印最近的操作" class="headerlink" title="打印最近的操作"></a>打印最近的操作</h6><p>git reflog<br>会把最近的操作打印出来格式是 –&gt; commitID HEAD@{里面是排序} 操作 注释 3628164 HEAD@{1}: commit: append GPL</p><h6 id="回退版本"><a href="#回退版本" class="headerlink" title="回退版本"></a>回退版本</h6><p>git reset –hard 3628164<br>然后还可以通过这个回退版本</p><h5 id="下面的自己看吧"><a href="#下面的自己看吧" class="headerlink" title="下面的自己看吧"></a>下面的自己看吧</h5><p>把原理记录一下 可以深入理解一下git</p><ol><li>工作区 我们操作的文件的目录就是工作区<br>缓存区 我们通过 git add 命令就是把当前工作区的文件缓存到缓存区<br>提交文件实际上就是把缓存区的文件 提交到当前的分支</li></ol><p>git checkout –文件名<br>把当前的工作区的内容 回退到缓存区的版本 –如果没有添加到缓存区的话就是当前分支的版本</p><p>git rm 文件名<br>删除文件 然后直接git commit 就可以提交了</p><p>git push -u origin master<br>第一次上传master的命令 失败的话可以修改.git目录下面的config文件改成<br>[remote “origin”]<br>url = <a href="https://MikasaKaneki@github.com/MikasaKaneki/Tools.git" target="_blank" rel="noopener">https://MikasaKaneki@github.com/MikasaKaneki/Tools.git</a></p><p>git push<br>上传缓存区的文件</p><p>git pull<br>同步当前的分区</p><p>git checkout -b 分支名<br>创建并切换分支</p><p>git branch 分支名<br>创建分支</p><p>git checkout 分支名<br>切换分支</p><p>git branch<br>查看所有的分支 有“*”的是当前分支</p><p>git merge 分支名<br>把当前的分支指向到 分支名</p><p>git branch -d 分支名<br>删除分支</p><p>git merge –no-ff -m “注释” 分支名<br>合并分支的时候保留这个分支名的分支</p><p>git stash<br>可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作</p><p>git stash list<br>查看储藏的分支列表</p><p>git stash apply<br>恢复储藏的内容 但是不会把这个储存的内容删除</p><p>git stash drop<br>删除储藏的内容</p><p>git stash pop<br>恢复的同时把stash内容也删了</p><p>git stash apply stash@{序列号}<br>你可以多次stash，恢复的时候，先用git stash list查看，然后恢复指定的stash</p><p>git branch -d 分支名<br>删除分支 如果这个分支没有被合并具备删除的话 git会有提示 可以用-D强行删除</p><p>git branch -D 分支名<br>强行删除分支</p><p>git remote<br>查看远程库的信息</p><p>git tag 标签名<br>创建标签</p><p>git tag 标签名 commitID<br>给某次提交追加标签</p><p>git tag<br>查看标签 但是这个标签不是按时间排序的</p><p>git show 标签名<br>查看这个标签名的详细信息</p><p>git tag -a v0.1 -m “version 0.1 released” 3628164<br>还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字</p><p>git tag -d 标签名<br>删除标签</p><p>git push origin 标签名<br>推送标签名</p><p>git push origin –tags<br>一次性推送全部尚未推送到远程的本地标签：</p><p>.gitignore<br>配置忽略的文件信息的文本</p><p>$ git config –global alias.co checkout<br>$ git config –global alias.ci commit<br>$ git config –global alias.br branch<br>配置别名</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;基本的配置&quot;&gt;&lt;a href=&quot;#基本的配置&quot; class=&quot;headerlink&quot; title=&quot;基本的配置&quot;&gt;&lt;/a&gt;基本的配置&lt;/h4&gt;&lt;h5 id=&quot;mac和linux的git的ssh密钥的方法&quot;&gt;&lt;a href=&quot;#mac和linux的git的ssh密钥
+      
     
     </summary>
     
     
-      <category term="C#" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TestHexo</title>
-    <link href="http://yoursite.com/2018/03/29/TestHexo/"/>
-    <id>http://yoursite.com/2018/03/29/TestHexo/</id>
-    <published>2018-03-29T15:10:14.000Z</published>
-    <updated>2018-04-04T04:14:14.379Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Test分类" scheme="http://yoursite.com/categories/Test%E5%88%86%E7%B1%BB/"/>
-    
-    
-      <category term="Unity" scheme="http://yoursite.com/tags/Unity/"/>
-    
-      <category term="Cocos" scheme="http://yoursite.com/tags/Cocos/"/>
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
     
   </entry>
   
